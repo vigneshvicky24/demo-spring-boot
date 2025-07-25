@@ -4,20 +4,23 @@
 set -e
 
 
-REPO_SSH_URL="git@github.com:vigneshvicky24/gs-spring-boot.git"
-TARGET_FOLDER="gs-spring-boot/complete"
+REPO_SSH_URL="git@github.com:vigneshvicky24/demo-spring-boot.git"
+TARGET_FOLDER="demo-spring-boot/complete"
+JAR_FILE="build/libs/spring-boot-0.0.1-SNAPSHOT.jar"
+
 
 # Clone the repository
 echo "Cloning repository from $REPO_SSH_URL..."
 git clone $REPO_SSH_URL
 cd $TARGET_FOLDER
-JAR_FILE="java -jar ./build/libs/spring-boot-0.0.1-SNAPSHOT.jar"
+
 
 # Build the project using Gradle 
 echo "Building the project using Gradle..."
 ./gradlew build
 
 # Check if JAR exists 
+
 if [ -f "$JAR_FILE" ]; then
   echo "JAR file found: $JAR_FILE"
 else
