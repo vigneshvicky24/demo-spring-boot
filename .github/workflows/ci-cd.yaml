@@ -37,6 +37,7 @@ jobs:
       # - name: 🏗️ Build Spring Boot application
       #   run: ./gradlew build
       - name: Build with Maven
+        working-directory: complete
         run: mvn clean install
 
       - name: 🐳 Set up Docker Buildx
