@@ -21,11 +21,11 @@ jobs:
       # - name: 🕵️ List contents of expected directory
       #   run: ls -l demo-spring-boot/complete
 
-      # - name: 🔧 Make Gradle wrapper executable
-      #   run: chmod +x demo-spring-boot/complete/gradlew
+      - name: 🔧 Make Gradle wrapper executable
+        run: chmod +x demo-spring-boot/complete/gradlew
 
       - name: 🏗️ Build Spring Boot application
-        # working-directory: demo-spring-boot/complete
+        working-directory: demo-spring-boot/complete
         run: ./gradlew build
 
       - name: 🐳 Set up Docker Buildx
