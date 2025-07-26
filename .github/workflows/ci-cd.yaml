@@ -19,10 +19,10 @@ jobs:
             distribution: 'temurin'
              
         - name: 🔧 Grant execute permission to Gradle
-          run:  chmod +x complete/gradlew
+          run:  chmod +x demo-spring-boot/complete/gradlew
           
         - name: Build spring boot application
-          working-directory: complete
+          working-directory: demo-spring-boot/complete
           run: ./gradlew build
 
         - name: Set up Docker Buildx
