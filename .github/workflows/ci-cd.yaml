@@ -34,8 +34,10 @@ jobs:
         working-directory: complete
         run: ./gradlew --version
 
-      - name: 🏗️ Build Spring Boot application
-        run: ./gradlew build
+      # - name: 🏗️ Build Spring Boot application
+      #   run: ./gradlew build
+      - name: Build with Maven
+        run: mvn clean install
 
       - name: 🐳 Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
