@@ -22,10 +22,10 @@ jobs:
         run: ls -R
 
       - name: 🔧 Make Gradle wrapper executable
-        run: chmod +x demo-spring-boot/complete/gradlew
+        run: chmod +x complete/gradlew
 
       - name: 🏗️ Build Spring Boot application
-        working-directory: demo-spring-boot/complete
+        working-directory: complete
         run: ./gradlew build
 
       - name: 🐳 Set up Docker Buildx
