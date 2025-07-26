@@ -19,7 +19,7 @@ jobs:
             distribution: 'temurin'
              
         - name: 🔧 Grant execute permission to Gradle
-          run: chmod +x complete/gradlew.bat
+          run:  chmod +x complete/gradlew
           
         - name: Build spring boot application
           working-directory: complete
