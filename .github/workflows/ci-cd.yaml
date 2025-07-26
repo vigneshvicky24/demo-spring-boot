@@ -25,14 +25,14 @@ jobs:
         working-directory: complete
         run: chmod +x gradlew
 
-      - name: 🕵️ List contents of complete directory
-        run: ls -l complete
-      - name: Check gradlew file type
-        run: file complete/gradlew
+      # - name: 🕵️ List contents of complete directory
+      #   run: ls -l complete
+      # - name: Check gradlew file type
+      #   run: file complete/gradlew
 
-      - name: Try running gradlew version
-        working-directory: complete
-        run: ./gradlew --version
+      # - name: Try running gradlew version
+      #   working-directory: complete
+      #   run: ./gradlew --version
 
       # - name: 🏗️ Build Spring Boot application
       #   run: ./gradlew build
