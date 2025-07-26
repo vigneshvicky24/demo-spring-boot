@@ -25,7 +25,7 @@ jobs:
         run: chmod +x complete/gradlew
 
       - name: 🏗️ Build Spring Boot application
-        working-directory: complete
+        working-directory: .
         run: ./gradlew build
 
       - name: 🐳 Set up Docker Buildx
