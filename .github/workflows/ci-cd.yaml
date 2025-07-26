@@ -18,8 +18,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      # - name: 🕵️ List contents of expected directory
-      #   run: ls -l demo-spring-boot/complete
+      - name: Debug - List files in repo
+        run: ls -R
 
       - name: 🔧 Make Gradle wrapper executable
         run: chmod +x demo-spring-boot/complete/gradlew
