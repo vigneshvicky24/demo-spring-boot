@@ -24,6 +24,9 @@ jobs:
       - name: 🔧 Make Gradle wrapper executable
         run: chmod +x complete/gradlew
 
+      - name: 🕵️ List contents of complete directory
+        run: ls -l complete
+
       - name: 🏗️ Build Spring Boot application
         run: ./gradlew build
 
