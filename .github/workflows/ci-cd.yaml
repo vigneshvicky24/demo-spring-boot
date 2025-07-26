@@ -22,7 +22,8 @@ jobs:
         run: ls -R
 
       - name: 🔧 Make Gradle wrapper executable
-        run: chmod +x complete/gradlew
+        working-directory: complete
+        run: chmod +x gradlew
 
       - name: 🕵️ List contents of complete directory
         run: ls -l complete
