@@ -1,5 +1,4 @@
 name: BUild And Deploy Application
-
 on:
   push:
     branches:
