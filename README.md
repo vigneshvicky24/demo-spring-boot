@@ -1,4 +1,4 @@
-#Spring Boot CI/CD Deployment with Docker, GitHub Actions, EC2 & Terraform
+Spring Boot CI/CD Deployment with Docker, GitHub Actions, EC2 & Terraform
 
 This project demonstrates an end-to-end automated deployment pipeline for a simple Spring Boot application. It includes:
 ✅ Maven build
