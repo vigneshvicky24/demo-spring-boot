@@ -83,5 +83,5 @@ jobs:
             docker stop springboot-container || true
             docker rm springboot-container || true
             echo "🚀 Starting new container..."
-            docker run -d --name springboot-container -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/demo-spring-app:latest
+            docker run -d --name springboot-container -p 9000:9000 ${{ secrets.DOCKER_USERNAME }}/demo-spring-app:latest
             echo "✅ Deployment complete!"
