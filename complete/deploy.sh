@@ -16,8 +16,8 @@ cd $TARGET_FOLDER
 
 
 # Build the project using Gradle 
-echo "Building the project using Gradle..."
-./gradlew build
+echo "Building the project using maven..."
+mvn clean install build
 
 # Check if JAR exists 
 
