@@ -45,17 +45,18 @@ Project Structure
 
  Local Setup & Build
 
- cd complete/
- mvn clean package
- java -jar build/lib/Spring-0-0-1.jar
+     cd complete/
+     mvn clean package
+     java -jar build/lib/Spring-0-0-1.jar
 
 App runs on http://localhost:9000
 
 Output: Greeting from springboot
 
 🐳 Dockerize the Application
-docker build -t demo-spring-app .
-docker run -p 9000:9000 demo-spring-app
+
+    docker build -t demo-spring-app .
+    docker run -p 9000:9000 demo-spring-app
 
 
 ☁️ Provision AWS Infrastructure (Terraform)
@@ -66,9 +67,10 @@ Configure your variables inside terraform/terraform.tfvars
   key_name   = "your-ec2-keypair"
 
 Then run
-  cd terraform/
-  terraform init
-  terraform apply -var-file="terraform.tfvars"
+
+      cd terraform/
+      terraform init
+      terraform apply -var-file="terraform.tfvars"
 
 This will create
   EC2 instance with Docker
@@ -88,12 +90,14 @@ Configure GitHub Secrets
 
 
 Trigger the GitHub Actions Pipeline
+
   Push any code change to the main branch to trigger CI/CD
+  
       git add .
       git commit -m "trigger pipeline"
       git push origin main
 
-  The pipeline performs:
+The pipeline performs:
 
   Build with Maven
   Docker build & push to Docker Hub
