@@ -14,80 +14,30 @@ This project demonstrates an end-to-end automated deployment pipeline for a simp
 Project Structure
 
 demo-spring-boot/
-├───.github
-│   └───workflows
-├───complete
-│   ├───.github
-│   │   └───workflows
-│   ├───.gradle
-│   │   ├───8.3
-│   │   │   ├───checksums
-│   │   │   ├───dependencies-accessors
-│   │   │   ├───executionHistory
-│   │   │   ├───fileChanges
-│   │   │   ├───fileHashes
-│   │   │   └───vcsMetadata
-│   │   ├───buildOutputCleanup
-│   │   └───vcs-1
-│   ├───.mvn
-│   │   └───wrapper
-│   ├───build
-│   │   ├───classes
-│   │   │   └───java
-│   │   │       ├───main
-│   │   │       │   └───com
-│   │   │       │       └───example
-│   │   │       │           └───springboot
-│   │   │       └───test
-│   │   │           └───com
-│   │   │               └───example
-│   │   │                   └───springboot
-│   │   ├───generated
-│   │   │   └───sources
-│   │   │       ├───annotationProcessor
-│   │   │       │   └───java
-│   │   │       │       ├───main
-│   │   │       │       └───test
-│   │   │       └───headers
-│   │   │           └───java
-│   │   │               ├───main
-│   │   │               └───test
-│   │   ├───libs
-│   │   ├───reports
-│   │   │   └───tests
-│   │   │       └───test
-│   │   │           ├───classes
-│   │   │           ├───css
-│   │   │           ├───js
-│   │   │           └───packages
-│   │   ├───resources
-│   │   │   └───main
-│   │   ├───test-results
-│   │   │   └───test
-│   │   │       └───binary
-│   │   └───tmp
-│   │       ├───bootJar
-│   │       ├───compileJava
-│   │       ├───compileTestJava
-│   │       ├───jar
-│   │       └───test
-│   ├───gradle
-│   │   └───wrapper
-│   ├───src
-│       ├───main
-│       │   ├───java
-│       │   │   └───com
-│       │   │       └───example
-│       │   │           └───springboot
-│       │   └───resources
-│       └───test
-│           └───java
-│               └───com
-│                   └───example
-│                        └───springboot
-│       
-└───terraform
-        ├── main.tf
-        ├── variables.tf
-        ├── outputs.tf
-        └── terraform.tfvars
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml                  # GitHub Actions pipeline
+├── complete/
+│   ├── .mvn/                          # Maven wrapper config
+│   │   └── wrapper/
+│   ├── gradle/                        # Gradle wrapper (unused)
+│   │   └── wrapper/
+│   ├── src/                           # Java source code
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/example/springboot/
+│   │   │   └── resources/
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/example/springboot/
+│   ├── Dockerfile                     # Docker build instructions
+│   ├── pom.xml                        # Maven build file
+│   └── target/                        # Maven build output (JAR file here)
+│       └── spring-boot-0.0.1-SNAPSHOT.jar
+├── terraform/
+│   ├── main.tf                        # Terraform infrastructure config
+│   ├── variables.tf                   # Variable definitions
+│   ├── outputs.tf                     # Terraform output definitions
+│   └── terraform.tfvars               # Custom values (vpc_id, subnet_ids, key_name)
+├── deploy.sh                          # EC2 deploy script used by GitHub Actions
+└── README.md                          # Full project documentation (this file)
